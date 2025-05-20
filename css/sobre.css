@@ -1,0 +1,313 @@
+/* -----------------------------
+    IMPORTAÇÃO DE FONTES
+----------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+/* -----------------------------
+    VARIÁVEIS GLOBAIS
+----------------------------- */
+:root {
+    --font-base: 16px;
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 2rem;
+    --space-lg: 4rem;
+    --cor-principal: #E8A200;
+    --cor-clara: #f4f4f4;
+    --cor-media: #FEF9E7;
+    --cor-escura: #554023;
+    --cor-hover: #6d544d;
+    --fonte-titulo: 'Lora', serif;
+    --fonte-corpo: 'Nunito Sans', sans-serif;
+}
+
+/* -----------------------------
+    RESET BÁSICO
+----------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* -----------------------------
+    CONFIGURAÇÕES GERAIS
+----------------------------- */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 6.25rem;
+}
+
+body {
+    font-family: var(--fonte-corpo);
+    background-color: var(--cor-clara);
+}
+
+
+/* -----------------------------
+    TIPOGRAFIA
+----------------------------- */
+h1,
+h2 {
+    text-align: center;
+    color: var(--cor-escura);
+    margin: 30px 0;
+    font-family: var(--fonte-titulo);
+}
+
+/* -----------------------------
+    HEADER E MENU
+----------------------------- */
+#cabecalho {
+    background-color: var(--cor-media);
+    width: 100%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    padding: 16px 0;
+}
+
+.container-cabecalho {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+#logo {
+    width: 200px;
+    height: auto;
+}
+
+/* --------- MENU COLAPSÁVEL --------- */
+
+/* Esconde o checkbox que controla o menu */
+#menu-toggle {
+    display: none;
+}
+
+/* Ícone do menu (hambúrguer) */
+#menu-icon {
+    display: none;
+    font-size: 28px;
+    color: var(--cor-escura);
+    cursor: pointer;
+    padding: 10px;
+}
+
+/* Estilo do menu normal */
+#menu ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+}
+
+#menu ul li a {
+    color: var(--cor-escura);
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 12px;
+    transition: all 0.3s ease;
+}
+
+#menu ul li a:hover {
+    color: var(--cor-hover);
+    border-bottom: 2px solid var(--cor-escura);
+}
+
+
+/* -----------------------------
+    SOBRE
+----------------------------- */
+
+#sobre {
+    padding: 40px;
+    background-color: var(--cor-clara);
+}
+
+
+#sobre .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+#sobre .texto {
+    flex: 1 1 50%;
+    max-width: 600px;
+
+}
+
+#sobre .texto h3 {
+    margin-bottom: 20px;
+}
+
+#sobre p {
+    margin-top: 10px;
+}
+
+#video {
+    flex: 1 1 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#video iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    max-width: 750px;
+    border-radius: 8px;
+}
+
+#video-bg {
+    clear: both;
+}
+
+.marrom {
+    color: var(--cor-escura);
+}
+
+.amarelo {
+    color: var(--cor-principal);
+}
+
+
+
+/* -----------------------------
+    RODAPÉ
+----------------------------- */
+footer {
+    background-color: var(--cor-principal);
+    padding: 10px 0;
+    color: var(--cor-escura);
+}
+
+.container-footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+#midias-sociais img:hover {
+    transform: rotate(15deg);
+    transition: all 0.3s;
+}
+
+
+/* -----------------------------
+   RESPONSIVIDADE (MEDIA QUERIES)
+----------------------------- */
+
+/* -----------------------------
+   RESPONSIVIDADE (MEDIA QUERIES)
+----------------------------- */
+
+@media (max-width: 768px) {
+
+    /* Elementos gerais */
+    .container-cabecalho,
+    .container-banner,
+    .container-saibamais,
+    .container-dicas,
+    .container-depoimento,
+    .container-newsletter,
+    .container-footer,
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .container-banner h1 {
+        margin: 0;
+    }
+
+    #campo,
+    #botao {
+        flex: 1 1 100%;
+    }
+
+    .box-depoimento {
+        flex-direction: column;
+        align-items: center;
+        text-align: left;
+    }
+
+    #box-dicas-imagem,
+    #box-dicas-texto {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    /* MENU HAMBÚRGUER */
+    #menu-icon {
+        display: block;
+    }
+
+    #menu ul {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--cor-media);
+        padding: 10px 0;
+        margin-top: 10px;
+        border-top: 1px solid #ccc;
+    }
+
+    #menu-toggle:checked+#menu-icon+#menu ul {
+        display: flex;
+    }
+
+    #menu ul li {
+        margin: 10px 0;
+    }
+
+    /* -----------------------------
+   RESPONSIVIDADE (MEDIA QUERY)
+----------------------------- */
+
+
+    #sobre .container {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 16px;
+    }
+
+    #sobre .texto,
+    #video {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    #video iframe {
+        width: 100%;
+        height: auto;
+    }
+
+    #sobre .texto h3 {
+        text-align: center;
+
+    }
+}

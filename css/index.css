@@ -1,0 +1,421 @@
+/* -----------------------------
+    IMPORTAÇÃO DE FONTES
+----------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+/* -----------------------------
+    VARIÁVEIS GLOBAIS
+----------------------------- */
+:root {
+  --font-base: 16px;
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 4rem;
+  --cor-principal: #E8A200;
+  --cor-clara: #f4f4f4;
+  --cor-media: #FEF9E7;
+  --cor-escura: #554023;
+  --cor-hover: #6d544d;
+  --fonte-titulo: 'Lora', serif;
+  --fonte-corpo: 'Nunito Sans', sans-serif;
+}
+
+/* -----------------------------
+    RESET BÁSICO
+----------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* -----------------------------
+    CONFIGURAÇÕES GERAIS
+----------------------------- */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6.25rem;
+}
+
+body {
+  font-family: var(--fonte-corpo);
+  background-color: var(--cor-clara);
+}
+
+/* -----------------------------
+    TIPOGRAFIA
+----------------------------- */
+h1,
+h2 {
+  text-align: center;
+  color: var(--cor-escura);
+  margin: 30px 0;
+  font-family: var(--fonte-titulo);
+}
+
+/* -----------------------------
+    HEADER E MENU
+----------------------------- */
+#cabecalho {
+  background-color: var(--cor-media);
+  width: 100%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  padding: 16px 0;
+}
+
+.container-cabecalho {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+#logo {
+  width: 200px;
+  height: auto;
+}
+
+/* --------- MENU COLAPSÁVEL --------- */
+
+/* Esconde o checkbox que controla o menu */
+#menu-toggle {
+  display: none;
+}
+
+/* Ícone do menu (hambúrguer) */
+#menu-icon {
+  display: none;
+  font-size: 28px;
+  color: var(--cor-escura);
+  cursor: pointer;
+  padding: 10px;
+}
+
+/* Estilo do menu normal */
+#menu ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+}
+
+#menu ul li a {
+  color: var(--cor-escura);
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 8px 12px;
+  transition: all 0.3s ease;
+}
+
+#menu ul li a:hover {
+  color: var(--cor-hover);
+  border-bottom: 2px solid var(--cor-escura);
+}
+
+
+
+/* -----------------------------
+    BANNER
+----------------------------- */
+#banner {
+  width: 100%;
+  height: 350px;
+  background-image: url("../img/img-banner.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.container-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.container-banner h1 {
+  text-align: center;
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* -----------------------------
+    SEÇÃO: SAIBA MAIS
+----------------------------- */
+#saibamais {
+  background-color: var(--cor-principal);
+  color: var(--cor-escura);
+  padding: 100px 0;
+}
+
+.container-saibamais {
+  text-align: center;
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.container-saibamais p {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.container-saibamais a {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--cor-escura);
+  text-decoration: none;
+  padding: 10px 30px;
+  border: 2px solid var(--cor-escura);
+  border-radius: 30px;
+}
+
+.container-saibamais a:hover {
+  background-color: var(--cor-escura);
+  color: var(--cor-principal);
+  transition: all linear 0.3s;
+}
+
+/* -----------------------------
+    SEÇÃO: DEPOIMENTOS
+----------------------------- */
+.container-depoimento {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.box-depoimento {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  flex: 1 1 300px;
+  min-width: 300px;
+  padding: 20px;
+  box-shadow: 6px 7px 6px -5px #ccc;
+}
+
+.box-depoimento p {
+  flex: 1;
+}
+
+.box-depoimento p span {
+  font-weight: bold;
+}
+
+/* -----------------------------
+    SEÇÃO: DICAS
+----------------------------- */
+#dicas {
+  padding: 60px 0;
+  background-color: var(--cor-clara);
+}
+
+.container-dicas {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+#box-dicas-imagem,
+#box-dicas-texto {
+  flex: 1 1 50%;
+  max-width: 50%;
+}
+
+#box-dicas-texto h3 {
+  color: var(--cor-escura);
+  margin-bottom: 30px;
+  font-family: var(--fonte-corpo);
+  font-size: 1.2rem;
+}
+
+#box-dicas-texto ul {
+  padding-left: 10px;
+}
+
+#box-dicas-texto li {
+  color: var(--cor-escura);
+  line-height: 2em;
+  font-size: 1rem;
+  list-style-type: none;
+}
+
+/* -----------------------------
+    SEÇÃO: NEWSLETTER
+----------------------------- */
+#newsletter {
+  background-color: var(--cor-escura);
+  padding: 30px 0;
+}
+
+#newsletter h2 {
+  color: var(--cor-clara);
+}
+
+.container-newsletter {
+  text-align: center;
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.container-newsletter form {
+  max-width: 720px;
+  margin: 20px auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+#campo {
+  flex: 1 1 60%;
+  padding: 15px;
+  border: solid 1px #fff;
+}
+
+#campo:focus {
+  outline: none;
+  border-color: var(--cor-principal);
+}
+
+#botao {
+  flex: 1 1 30%;
+  padding: 15px 30px;
+  background-color: var(--cor-escura);
+  border: 2px solid var(--cor-principal);
+  color: var(--cor-clara);
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#botao:hover {
+  background-color: var(--cor-hover);
+  color: var(--cor-principal);
+  transition: 0.5s;
+}
+
+/* -----------------------------
+    RODAPÉ
+----------------------------- */
+footer {
+  background-color: var(--cor-principal);
+  padding: 10px 0;
+  color: var(--cor-escura);
+}
+
+.container-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+#midias-sociais img:hover {
+  transform: rotate(15deg);
+  transition: all 0.3s;
+}
+
+
+/* -----------------------------
+   RESPONSIVIDADE (MEDIA QUERIES)
+----------------------------- */
+
+@media (max-width: 768px) {
+
+  /* Elementos gerais (usados nas duas páginas) */
+  .container-cabecalho,
+  .container-banner,
+  .container-saibamais,
+  .container-dicas,
+  .container-depoimento,
+  .container-newsletter,
+  .container-footer,
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .container-banner h1 {
+    margin: 0;
+  }
+
+  #campo,
+  #botao {
+    flex: 1 1 100%;
+  }
+
+  .box-depoimento {
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+  }
+
+  #box-dicas-imagem,
+  #box-dicas-texto {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  /* MENU HAMBÚRGUER */
+  #menu-icon {
+    display: block;
+  }
+
+  #menu ul {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--cor-media);
+    padding: 10px 0;
+    margin-top: 10px;
+    border-top: 1px solid #ccc;
+  }
+
+  #menu-toggle:checked+#menu-icon+#menu ul {
+    display: flex;
+  }
+
+  #menu ul li {
+    margin: 10px 0;
+  }
+
+
+}
