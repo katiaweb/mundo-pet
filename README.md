@@ -9,12 +9,12 @@ Este é um projeto de site fictício para um pet shop, feito com HTML e CSS, des
 - `contato.html` – Formulário e localização
 
 ## 🛠️ Tecnologias Utilizadas:
-- `HTML5
-- `CSS3
-- `Flexbox
-- `Google Fonts
-- `Responsividade com @media
-- `Git & GitHub
+- `HTML5`
+- `CSS3`
+- `Flexbox`
+- `Google Fonts`
+- `Responsividade com @media`
+- `Git & GitHub`
 
 ## 👩‍💻 Aluno:
 - Nome: [Seu Nome Aqui]
